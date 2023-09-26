@@ -1,0 +1,93 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "final",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Update",
+        "importPath": "telegram",
+        "description": "telegram",
+        "isExtraImport": true,
+        "detail": "telegram",
+        "documentation": {}
+    },
+    {
+        "label": "Application",
+        "importPath": "telegram.ext",
+        "description": "telegram.ext",
+        "isExtraImport": true,
+        "detail": "telegram.ext",
+        "documentation": {}
+    },
+    {
+        "label": "CommandHandler",
+        "importPath": "telegram.ext",
+        "description": "telegram.ext",
+        "isExtraImport": true,
+        "detail": "telegram.ext",
+        "documentation": {}
+    },
+    {
+        "label": "MessageHandler",
+        "importPath": "telegram.ext",
+        "description": "telegram.ext",
+        "isExtraImport": true,
+        "detail": "telegram.ext",
+        "documentation": {}
+    },
+    {
+        "label": "filters",
+        "importPath": "telegram.ext",
+        "description": "telegram.ext",
+        "isExtraImport": true,
+        "detail": "telegram.ext",
+        "documentation": {}
+    },
+    {
+        "label": "ContextTypes",
+        "importPath": "telegram.ext",
+        "description": "telegram.ext",
+        "isExtraImport": true,
+        "detail": "telegram.ext",
+        "documentation": {}
+    },
+    {
+        "label": "load_api_key",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "load_api_key",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def load_api_key():\n        with open('config.json') as config_file:\n            config_data = json.load(config_file)\n            return config_data['telegram_api_key']\nTOKEN : final = load_api_key() #here you place the telegram token\nBOT_USER_NAME : final = '@Alghufar_bot'    \nasync def start_command(update : Update, context: ContextTypes.DEFAULT_TYPE):\n    await update.message.reply_text(\"Salut, que puis-je faire pour toi ?\")\nasync def help_command(update : Update, context: ContextTypes.DEFAULT_TYPE):\n    await update.message.reply_text(\"Je suis la pour t'aider !\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "handle_response",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def handle_response(text : str) -> str:\n    processed :str = text.lower()\n    if 'hi' in processed:\n        return 'Hey there !'\n    if 'how are you' in processed:\n        return \"I'm fine thanks how can i help today ?\"\n    return 'I didn\\t understand what your wrote !'\nasync def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):\n    message_type: str = update.message.chat.type\n    text : str = update.message.text",
+        "detail": "main",
+        "documentation": {}
+    }
+]
