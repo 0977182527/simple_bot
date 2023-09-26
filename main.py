@@ -28,6 +28,9 @@ def handle_response(text : str) -> str:
     if 'hi' in processed:
         return 'Hey there !'
     
+    if 'hola' in processed:
+        return 'Hola mi amigo'
+     
     if 'how are you' in processed:
         return "I'm fine thanks how can i help today ?"
     

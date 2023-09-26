@@ -86,7 +86,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def handle_response(text : str) -> str:\n    processed :str = text.lower()\n    if 'hi' in processed:\n        return 'Hey there !'\n    if 'how are you' in processed:\n        return \"I'm fine thanks how can i help today ?\"\n    return 'I didn\\t understand what your wrote !'\nasync def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):\n    message_type: str = update.message.chat.type\n    text : str = update.message.text",
+        "peekOfCode": "def handle_response(text : str) -> str:\n    processed :str = text.lower()\n    if 'hi' in processed:\n        return 'Hey there !'\n    if 'hola' in processed:\n        return 'Hola mi amigo'\n    if 'how are you' in processed:\n        return \"I'm fine thanks how can i help today ?\"\n    return 'I didn\\t understand what your wrote !'\nasync def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):",
         "detail": "main",
         "documentation": {}
     }
